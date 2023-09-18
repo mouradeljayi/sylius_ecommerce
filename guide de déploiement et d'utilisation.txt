@@ -1,0 +1,101 @@
+================================
+EXIGENCES
+================================
+
+avant de démarrer le projet vous devez avoir sur votre machine :
+
+1 - PHP: version >= 8
+
+2 - Composer
+
+================================
+DEPLOIEMENT
+================================
+
+Pour démarrer le projet sur votre machine suivez les étapes suivantes :
+
+1 - déplacez vous dans le chemin du projet qui est sous le nom "acme".
+
+2 - installez les dépendences du projet par la commande : "composer install"
+
+3 - créer une base de données MySQL sous le nom : "sylius_dev"
+
+4 - mettez à jour l'environnement de configuration de Symfony par la commande :
+
+    "DATABASE_URL=mysql://votre_nom_utilisateur:votre_mot_de_passe@127.0.0.1:3306/sylius_dev"
+
+5 - Réexécutez les migrations de bases de données par la commande : 
+  
+     "php bin/console doctrine:migrations:migrate"
+
+6 - Charger des exemples de données dans la base de données par la commande :
+	 
+    "php bin/console sylius:fixtures:load"
+
+7 - Afin de voir une interface entièrement fonctionnelle, vous devrez installer les assets par la commande :
+
+    "yarn install"
+
+8 - démarrez le serveur de développement Symfony par la commande :
+
+    "symfony server:start"
+
+9 -  Accédez à l'application Sylius par votre navigateur en utilisant l'URL suivant :
+
+     "http://localhost:8000"
+
+=============================
+UTILISATION
+=============================
+
+Après avoir démarré votre application Symfony Sylius, voici un guide général d'utilisation de l'application :
+
+1 - Accéder à la Boutique en Ligne :
+
+Lorsque vous démarrez votre application Sylius, vous devriez pouvoir accéder à la boutique en ligne en ouvrant votre navigateur web 
+et en entrant l'URL : http://localhost:8000. Vous devriez voir la page d'accueil de la boutique en ligne Sylius.
+
+2 - Navigation dans la Boutique :
+
+Explorez la boutique en ligne pour voir les produits, les catégories et les pages. Vous pouvez utiliser la navigation pour rechercher des produits, 
+voir les détails des produits et ajouter des articles à votre panier.
+
+3 - Ajouter des Produits au Panier :
+
+Pour ajouter des produits à votre panier, rendez-vous sur la page du produit que vous souhaitez acheter, puis cliquez sur le bouton "Ajouter au panier" 
+ou une action similaire. Vous pouvez ensuite voir les produits ajoutés dans votre panier.
+
+4 - Passer une Commande :
+
+Lorsque vous avez terminé vos achats, vous pouvez passer une commande depuis votre panier. Suivez les étapes pour fournir les informations nécessaires, 
+telles que votre adresse de livraison et vos informations de paiement.
+
+5 - Gestion des Commandes :
+
+Les commandes que vous passez seront enregistrées dans votre application. En tant qu'administrateur, vous pouvez gérer ces commandes, 
+les marquer comme expédiées, suivre les paiements, etc.
+
+6 - Accéder à l'Interface d'Administration :
+
+Pour accéder à l'interface d'administration de Sylius, rendez-vous sur l'URL d'administration (http://localhost:8000/admin) 
+et connectez-vous avec les données suivantes :
+
+=> Nom d'utilisateur : sylius@example.com
+=> Mot de passe : sylius
+
+7 - Gérer les Produits et les Catégories :
+
+Dans l'interface d'administration, vous pouvez gérer les produits, les catégories, les variantes de produits, les images, etc. 
+Vous pouvez ajouter de nouveaux produits, modifier les détails des produits existants et organiser les produits dans des catégories.
+
+8 - Gérer les Clients et les Utilisateurs :
+
+Vous pouvez gérer les informations des clients, créer de nouveaux comptes clients, et gérer les utilisateurs du système. 
+L'interface d'administration vous permet de gérer les autorisations et les rôles des utilisateurs.
+
+
+
+
+
+
+
